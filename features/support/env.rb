@@ -63,3 +63,14 @@ Capybara.configure do |config|
 #     config.app_host = 'http://yournextleap.com'
     config.app_host = 'http://google.com'
 end
+
+if ENV['HEADLESS'] == 'true'
+  require 'headless'
+
+  headless = Headless.new
+  headless.start
+
+  at_exit do
+    headless.destroy
+  end
+end
