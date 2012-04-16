@@ -3,6 +3,13 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.9'
 
 gem 'devise', '1.1.rc0'
+gem 'headless'
+
+group :test do
+  gem 'cucumber-rails'
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -31,3 +38,4 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
